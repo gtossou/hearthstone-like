@@ -1,21 +1,32 @@
 var config = {
         type: Phaser.AUTO,
         width: 800,
-        height: 600,
-        scene: {
-            preload: preload,
-            create: create
-        }
+        height: 600
+        //canvasStyle: "gameDiv"
+        //scene: {
+        //    preload: preload,
+        //    create: create
+        //}
     };
-    var game = new Phaser.Game(config);
-    function preload ()
+var game = new Phaser.Game(config);
+
+game.state.add("boot",bootState);
+game.state.add("load",loadState);
+game.state.add("menu",menuState);
+game.state.add("play",playState);
+//game.state.add("win",winState);
+
+game.state.start("boot");
+
+    /*function preload ()
     {
-        this.load.image('sky', 'assets/backg.jpg');
+        game.load.image('backg', 'assets/backg.jpg');
         this.load.image('logo', 'assets/Phaser-2D.png');
         this.load.image('red', 'assets/red.png');
         this.load.image('play_btn', 'assets/play_button.png');
-    }
-    function create ()
+    }*/
+
+    /*function create ()
     {
         this.add.image(400, 300, 'sky');
         var startBtn=this.add.image(400, 300, 'play_btn').setInteractive();
@@ -34,4 +45,4 @@ var config = {
         //logo.setBounce(1, 1);
         //logo.setCollideWorldBounds(true);
         //emitter.startFollow(logo);
-    }
+    }*/
