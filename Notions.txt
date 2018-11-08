@@ -1,0 +1,6 @@
+states
+fonts
+difficultés pour acces aux elements canvas(images) et les modifier manuellement
+fouiller dans l'api pour trouver des fonctions pour des taches manuelles(scale)
+
+The idea for the web is to cut down on HTTP requests: rather than hitting the server 10 times for 10 different images, only 1 request is sent. Of course, that one file will have a large file size (relatively speaking) but it will likely have a smaller file size than the sum of all the individual files. So smaller overall size + less HTTP requests = better performance. You can use a service like SpriteMe to easily create a sprite sheet for your website.
