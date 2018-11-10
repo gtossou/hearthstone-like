@@ -7,7 +7,7 @@ var menuState={
     	//sprite.animations.add('walk');
     	//sprite.animations.play('walk', 10, true);
 
-        var startBtn=game.add.button(300, 200, 'play_btn', this.ClickMe);
+        var startBtn=game.add.button(game.world.centerX-35, game.world.centerY, 'play_btn', this.ClickMe);
         
         //startBtn.on("pointerdown", function (ev) {
         //    //game.state.start("play");

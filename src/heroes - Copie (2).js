@@ -42,6 +42,9 @@ var heroesState={
 		heroCard.tint=0xffffff;        
 	},
 
+	update: function(){
+		heroCard.tint=0xffffff;        
+	},
 
     ChooseHero: function(){
 		//game.state.start("menu");

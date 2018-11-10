@@ -10,6 +10,13 @@ var config = {
     };
 var game = new Phaser.Game(config);
 
+game.global = {
+    initWidthAi : 60,
+    initHeightAi : 170,
+    ai_health : 25,
+    hero_health : 25
+};
+
 game.state.add("boot",bootState);
 game.state.add("load",loadState);
 game.state.add("menu",menuState);

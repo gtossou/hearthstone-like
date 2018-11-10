@@ -13,7 +13,7 @@ var heroesState={
       	var heroesFiles=["obatala.jpg","obba.jpg","olokun.jpg","orunmila.jpg","oshun.jpg",
       	"oxosi.jpg","oya.jpg","ozain.jpg","shango.jpg","yemoja.jpg"];	
 		var heroesLength = heroesFiles.length;
-		var heroCard;
+		var heroCard=[];
 		//revoir ces deux fonctions
 		for (var i = 0; i < heroesLength; i++) {
 			//longueur de chaque élément dans heroes
@@ -25,9 +25,9 @@ var heroesState={
 				initHeight = 350;
 				}
 			var ln=heroesFiles[i].length;
-			heroCard=game.add.button(initWidth, initHeight, heroesFiles[i].substring(0,ln-4),this.ChooseHero);
+			heroCard=game.add.button(initWidth, initHeight, heroesFiles[i].substring(0,ln-4),this.ChooseHero,this.over);
     		heroCard.scale.setTo(0.5,0.5);
-    		heroCard.alpha=1;
+    		heroCard.alpha=0.4;
     		initWidth=initWidth+150;
 
         }; 
@@ -41,7 +41,6 @@ var heroesState={
 	over: function(){
 		heroCard.tint=0xffffff;        
 	},
-
 
     ChooseHero: function(){
 		//game.state.start("menu");
